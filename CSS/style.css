@@ -1,0 +1,171 @@
+body{
+    background-color:rgb(189, 218, 233);
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    background-color: blue;
+    display: block;
+    height: 50px;
+    padding-top: 20px;
+    padding-left: 35px;
+}
+
+.header h{
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.new_task{
+    background-color: #fff;
+    display: block;
+    align-content:center;
+    width: 350px;
+    height: 100px;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 10px 1px 3px rgba(1,0,0,0.1);
+    list-style-type: none;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.new_task label{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.new_task input{
+    text-align: start;
+    width: 200px;
+    border: 1px solid #ccc;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
+}
+
+.new_task button{
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
+}
+
+.tasks{
+    display: flex;
+}
+
+.tasks li{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-left: 5px solid blue;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 10px 1px 3px rgba(1,0,0,0.1);
+    list-style-type: none;
+}
+
+.tasks button{
+    background-color: red;
+    text-align: center;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
+}
+
+.tasks label{
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 10px 0;
+    box-shadow: 10px 1px 3px rgba(1,0,0,0.1);
+    list-style-type: none;
+}
+
+.blogack{
+    display: block;
+}
+
+.blogack label{
+    background-color:   gray;  
+}
+
+.blogack li{
+    border-left: 5px solid gray;
+
+}
+
+.in_progress{
+    display: block;
+}
+
+.in_progress label{
+    background-color: blue;  
+}
+
+.in_progress li{
+    border-left: 5px solid blue;
+}
+
+.ready{
+    display: block;
+}
+
+.ready label{
+    background-color:   green;  
+}
+
+.ready li{
+    border-left: 5px solid green;
+
+}
+
+.garbage{
+    display: block;
+}
+
+.garbage label{
+    background-color:   red;  
+}
+
+.garbage li{
+    border-left: 5px solid red;
+
+}
+.new_task button:hover {
+    color: black;
+    background-color: rgb(210, 26, 26);
+    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
+}
+
+.new_task button:active {
+    color: #0077ff;
+}
+
+
+.tasks button:hover {
+    color: black;
+    background-color:blue;
+    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
+}
+
+.tasks button:active {
+    color: red;
+}
+
