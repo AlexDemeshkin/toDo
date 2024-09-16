@@ -21,7 +21,7 @@ function createBlogackComponentTemplate() {
 }
 
 
-export default class HeaderComponent {
+export default class BlogackComponent {
   getTemplate() {
     return createBlogackComponentTemplate();
   }
