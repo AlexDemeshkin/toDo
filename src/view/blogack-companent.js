@@ -1,7 +1,7 @@
 import {createElement} from '../framework/render.js';
 
 
-function createHeaderComponentTemplate() {
+function createBlogackComponentTemplate() {
     return (
       
       `
@@ -23,7 +23,7 @@ function createHeaderComponentTemplate() {
 
 export default class HeaderComponent {
   getTemplate() {
-    return createHeaderComponentTemplate();
+    return createBlogackComponentTemplate();
   }
 
 
