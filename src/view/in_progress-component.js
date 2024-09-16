@@ -1,7 +1,7 @@
 import {createElement} from '../framework/render.js';
 
 
-function createHeaderComponentTemplate() {
+function createInPrograssComponentTemplate() {
     return (
       
       `
@@ -20,9 +20,9 @@ function createHeaderComponentTemplate() {
 }
 
 
-export default class HeaderComponent {
+export default class InPrograssComponent {
   getTemplate() {
-    return createHeaderComponentTemplate();
+    return createInPrograssComponentTemplate();
   }
 
 
