@@ -5,7 +5,15 @@ function createHeaderComponentTemplate() {
     return (
       
       `
-            <h>Список задач</h>
+
+        <div class="in_progress_blok">
+            <ul class="list_in_progress">
+                <label>В процессе</label>
+                <li>Выпить смузи</li>
+                <li>Попить воды</li>
+            </ul>
+        </div>
+
     `
 
       );
