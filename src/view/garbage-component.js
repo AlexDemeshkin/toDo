@@ -1,7 +1,7 @@
 import {createElement} from '../framework/render.js';
 
 
-function createHeaderComponentTemplate() {
+function createGarbageComponentTemplate() {
     return (
       
       `
@@ -19,9 +19,9 @@ function createHeaderComponentTemplate() {
 }
 
 
-export default class HeaderComponent {
+export default class GarbageComponent {
   getTemplate() {
-    return createHeaderComponentTemplate();
+    return createGarbageComponentTemplate();
   }
 
 
