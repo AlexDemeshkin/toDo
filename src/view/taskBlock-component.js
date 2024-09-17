@@ -7,10 +7,10 @@ function createTaskBlockTemplate() {
       `
               <div class="taskBlock">
                   <ul class="list_blok">
-                    <label>Корзина</label>
-                    <li>Сходить погулять</li>
-                    <li>Прочитать войну и мир</li>
-                    <button type="button">x Очистить</button>
+                    <label>Название блока</label>
+                    <li>Название первой задачи</li>
+                    <li>Название первой задачи</li>
+                    <li>Название первой задачи</li>
                 </ul>
               </div>
     `
