@@ -15,5 +15,5 @@ const taskBlockContainer= document.querySelector('.tasks');
 render(new HeaderComponent(), bodyContainer, RenderPosition.AFTERBEGIN);
 render(new FormComponent(), formContainer, RenderPosition.AFTERBEGIN);
 for (var i =1;i<=4;i++){
-    render(new TaskBlockComponent(), taskBlockContainer, RenderPosition.AFTEREND);
+    render(new TaskBlockComponent(), taskBlockContainer, RenderPosition.AFTERBEGIN);
 }
