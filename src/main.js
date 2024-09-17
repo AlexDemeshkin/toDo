@@ -1,6 +1,6 @@
 import HeaderComponent from './view/header-component.js';
 import FormComponent from './view/form-component.js';
-import TaskBlockComponent from './view/blogack-companent.js';
+import TaskBlockComponent from './view/taskBlock-component.js';
 
 import {render, RenderPosition} from './framework/render.js';
 
