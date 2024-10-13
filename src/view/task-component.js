@@ -5,7 +5,7 @@ function createTaskComponentTemplate(task) {
     const{status,title}=task;
     return (
       `        
-        <p class="task--${status}">${title}</p>
+        <li class="task--${status}">${title}</li>
         
         `
 
