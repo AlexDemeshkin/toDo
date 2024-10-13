@@ -6,8 +6,7 @@ function createTaskComponentTemplate(task) {
     return (
       `        
         <li class="task--${status}">${title}</li>
-                 </ul>
-
+        
         `
 
       );
