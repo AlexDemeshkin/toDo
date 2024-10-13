@@ -4,7 +4,7 @@ import {createElement} from '../framework/render.js';
 function createTaskComponentTemplate(task) {
     const{status,title}=task;
     return (
-`        
+      `        
         <li class="task--${status}">${title}</li>
         `
 
