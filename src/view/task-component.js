@@ -4,12 +4,9 @@ import {createElement} from '../framework/render.js';
 function createTaskComponentTemplate(task) {
     const{status,title}=task;
     return (
-      `     
-                     <ul class="list_${status}">
-            
-        
-        <li class="task--${status}">${title}</li>
-         </ul>
+      `
+      <li class="task--${status}">${title}</li>
+      
         `
 
       );
