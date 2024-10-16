@@ -5,10 +5,9 @@ function createTasksListComponentTemplate(status) {
     return (
       
       `
-       <div class="${status}">
-                <label>${StatusLabel[status]}</label>
-
-        </div>            
+        <ul class="list_${status}">
+                      <label>${StatusLabel[status]}</label> 
+        </ul>           
       
      
     `
