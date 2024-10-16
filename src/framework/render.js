@@ -8,13 +8,11 @@ const RenderPosition = {
     AFTEREND: 'afterend',
 };
   
-  
 function createElement(template) {
     const newElement = document.createElement('div');
     newElement.innerHTML = template;
     return newElement.firstElementChild;
 }
-  
   
 function render(component, container, place = RenderPosition.BEFOREEND) {
   if (!(component instanceof AbstractComponent)) {
@@ -26,5 +24,4 @@ function render(component, container, place = RenderPosition.BEFOREEND) {
    container.insertAdjacentElement(place, component.element);
 }
 
-  
 export {RenderPosition, createElement, render};
