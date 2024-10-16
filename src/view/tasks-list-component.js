@@ -14,19 +14,6 @@ function createTasksListComponentTemplate(status) {
       );
 }
 
-// function createTaskListTemplate() {
-//   return (
-    
-//     `
-//                 <ul class="task_list">
-//                            <label>Название</label>
-
-//               </ul>
-//   `
-
-//     );
-// }
-
 export default class tasksListComponent extends AbstractComponent {
   status;
 
