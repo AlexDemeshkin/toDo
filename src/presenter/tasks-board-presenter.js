@@ -38,8 +38,7 @@ init() {
 
 }
 makeClearButton() {
-  const basketContainer = document.querySelector(`.${Status.BASKET}`);
-  
+  const basketContainer = document.querySelector(`.list_${Status.BASKET}`);
   render(new ClearButtonComponent(), basketContainer);
 }
 
