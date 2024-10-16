@@ -12,15 +12,6 @@ function createTaskComponentTemplate(task) {
       );
 }
 
-// function createTaskComponentTemplate() {
-//     return (
-//         `
-//         <li>Название первой задачи</li>
-//         `
-//       );
-// }
-
-
 export default class TaskComponent extends AbstractComponent {
     constructor({ task } ) {
       super();
