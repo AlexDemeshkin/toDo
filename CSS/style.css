@@ -102,10 +102,6 @@ body{
     list-style-type: none;
 }
 
-.taskBlock{
-    display: block;
-}
-
 .taskBlock label{
     background-color:   gray;  
 }
@@ -117,49 +113,40 @@ body{
 
 
 
-.blogack label{
+.list_blogack label{
     background-color: gray;  
 }
 
-.blogack li{
+.list_blogack li{
     border-left: 5px solid gray;
 }
 
- .in_progress{
-    display: block;
-}
+ 
 
-.in_progress label{
+.list_in_progress label{
     background-color: blue;  
 }
 
-.in_progress li{
+.list_in_progress li{
     border-left: 5px solid blue;
 }
 
-.ready{
-    display: block;
-}
 
-.ready label{
+.list_ready label{
     background-color:   green;  
 }
 
-.ready li{
+.list_ready li{
     border-left: 5px solid green;
 
 }
 
-.garbage{
-    display: block;
-    
-}
 
-.garbage label{
+.list_garbage label{
     background-color:   red;  
 }
 
-.garbage li{
+.list_garbage li{
     border-left: 5px solid red;
 
 }
@@ -184,3 +171,10 @@ body{
     color: red;
 } 
 
+.task-element {
+    background-color: #f4f4f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
