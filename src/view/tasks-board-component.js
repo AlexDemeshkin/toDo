@@ -17,7 +17,7 @@ function createTaskBoardTemplate() {
 
 export default class TaskBoard {
   
-  get template() {
+  getTemplate() {
     return createTaskBoardTemplate();
   }
   getElement() {
