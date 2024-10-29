@@ -13,17 +13,23 @@ export default class TasksBoardPresenter {
   #boardTasks=[];
 
   #tasksBoardComponent = new TaskBoardComponent()
-
+  
  constructor({boardContainer, tasksModel}) {
    this.#boardContainer = boardContainer;
    this.#tasksModel=tasksModel;  
  }
 
-init() {
-    this.#boardTasks = [...this.#tasksModel.getTasks()];
-  render(this.#tasksBoardComponent, this.#boardContainer);  
 
-  for (let el in Status) {
+ init(){
+  this.#boardTasks = [...this.#tasksModel.getTasks()];
+    this.#renderBoard();
+
+    this.makeClearButton();
+    }
+      
+      #renderBoard(){
+        render(this.#tasksBoardComponent, this.#boardContainer);  
+        for (let el in Status) {
           this.status_title = Status[el];
           const tasksListComponent = new TasksListComponent({status: Status[el]});
 
@@ -40,14 +46,13 @@ init() {
             }
           }
         }
-      this.makeClearButton();
+    }
+    #renderTask(task, container, status_title) {
+      const taskComponent = new TaskComponent({ task: task });
+      if (task.status == status_title) {
+        render(taskComponent, container);
       }
-      #renderTask(task, container, status_title) {
-        const taskComponent = new TaskComponent({ task: task });
-        if (task.status == status_title) {
-          render(taskComponent, container);
-        }
-      }  
+    }  
     makeClearButton() {
       const basketContainer = document.querySelector(`.list_${Status.BASKET}`);
       render(new ClearButtonComponent(), basketContainer);
