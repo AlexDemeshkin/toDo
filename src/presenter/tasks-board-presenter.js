@@ -20,40 +20,44 @@ export default class TasksBoardPresenter {
  }
 
 
- init(){
+ init() {
   this.#boardTasks = [...this.#tasksModel.getTasks()];
     this.#renderBoard();
-
     this.makeClearButton();
     }
       
-      #renderBoard(){
-        render(this.#tasksBoardComponent, this.#boardContainer);  
+    #renderBoard(){
+      render(this.#tasksBoardComponent, this.#boardContainer);  
         for (let el in Status) {
           this.status_title = Status[el];
-          const tasksListComponent = new TasksListComponent({status: Status[el]});
-
-            render(tasksListComponent, this.#tasksBoardComponent.element);
-          if (tasksListComponent.length===0){
-            render(new SubmitTaskComponent(), tasksListComponent.element());
-          }
-          else{
-            for (let j = 0; j <  this.#boardTasks.length; j++) {
-              this.#renderTask(
-                this.#boardTasks[j],
-                tasksListComponent.element,
-                this.status_title)
-            }
-          }
+          this.#renderTasksList(Status[el],this.#tasksBoardComponent.element)
         }
+      }
+    
+    #renderTasksList(status_title,container){
+      const tasksListComponent = new TasksListComponent({status: status_title});
+      render(tasksListComponent,container);
+    if (tasksListComponent.length===0){
+      render(new SubmitTaskComponent(), tasksListComponent.element());
+      }
+    else{
+      for (let j = 0; j <  this.#boardTasks.length; j++) {
+        
+        this.#renderTask(
+          this.#boardTasks[j],
+          tasksListComponent.element,
+          this.status_title)
+        }
+      }
     }
+
     #renderTask(task, container, status_title) {
       const taskComponent = new TaskComponent({ task: task });
       if (task.status == status_title) {
         render(taskComponent, container);
       }
     }  
-    makeClearButton() {
+    makeClearButton(){
       const basketContainer = document.querySelector(`.list_${Status.BASKET}`);
       render(new ClearButtonComponent(), basketContainer);
   }
