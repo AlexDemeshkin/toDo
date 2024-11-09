@@ -2,7 +2,7 @@ import TasksListComponent from '../view/tasks-list-component.js';
 import SubmitTaskComponent from '../view/submitTask-component.js';
 import TaskBoardComponent from '../view/tasks-board-component.js';
 import ClearButtonComponent from "../view/button-clear.js";
-import { Status } from '../const.js';
+import { Status, StatusLabel } from '../const.js';
 import { render } from '../framework/render.js';
 import TaskPresenter from './task-presenter.js';
 
@@ -35,13 +35,13 @@ export default class TasksBoardPresenter {
         }
       }
     #renderTasksList(status_title,container){
-      const tasksListComponent = new TasksListComponent({status: status_title});
+      const tasksListComponent = new TasksListComponent({status: status_title, onTaskDrop: this.#handleTaskDrop.bind(this)});
       render(tasksListComponent,container);
       const tasksForStatus = this.#tasksModel.getTasksByStatus(
         this.status_title
       );
     if (tasksForStatus.length===0){
-      render(new SubmitTaskComponent(), tasksListComponent.element());
+      render(new SubmitTaskComponent(), tasksListComponent.element);
       }
     else{
 
@@ -55,7 +55,7 @@ export default class TasksBoardPresenter {
       taskPresenter.init(); 
     }  
     #renderGarbageList(status_title,container){
-      const tasksListComponent=new TasksListComponent({status:status_title})
+      const tasksListComponent=new TasksListComponent({status:status_title,onTaskDrop: this.#handleTaskDrop.bind(this)})
       render(tasksListComponent,container);
       const tasksForStatus = this.#tasksModel.getTasksByStatus(
         this.status_title
@@ -90,6 +90,11 @@ export default class TasksBoardPresenter {
   #handleModelChange(){
     this.#clearBoard();
     this.#renderBoard();
+  }
+
+  #handleTaskDrop(taskId,newStatus){
+    this.#tasksModel.updateTaskStatus(taskId,newStatus)
+    console.log(newStatus)
   }
   #clearBoard(){
     this.#boardContainer.innerHTML='';
