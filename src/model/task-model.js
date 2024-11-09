@@ -1,4 +1,4 @@
-import { generateId } from '../utils.js';
+import { generateId } from '../../utils.js';
 import { tasks } from '../mock/task.js';
 
 export default class TasksModel {
@@ -25,6 +25,16 @@ export default class TasksModel {
  }
  clearTasksByStatus(status) {
   this.#boardtasks = this.#boardtasks.filter(task => task.status !== status);
+}
+
+updateTaskStatus(taskId, newStatus) {
+  const task = this.#boardtasks.find(task => task.id === taskId);
+  console.log(task)
+  
+  if (task) {
+    task.status = newStatus;
+    this._notifyObservers();
+  }
 }
 
  addObserver(observer){
