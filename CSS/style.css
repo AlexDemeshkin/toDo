@@ -1,181 +1,123 @@
-body{
-    background-color:#9CF6FB;
+/* Основные стили для body */
+body {
+    background-color: #9CF6FB;
     padding: 0;
     margin: 0;
-}
-
-.header{
-    background-color:#4A5FC1;
-    display: block;
-    height: 50px;
-    padding-top: 20px;
-    padding-left: 35px;
-}
-
-.header h{
     font-family: "Open Sans", sans-serif;
+  }
+  
+  /* Шапка */
+  .header {
+    background-color: #4A5FC1;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
     color: #fff;
     font-size: 30px;
     font-weight: 700;
-}
-
-.new_task{
+  }
+  
+  /* Блок новой задачи */
+  .new_task {
     background-color: #fff;
-    display: block;
-    align-content:center;
     width: 350px;
-    height: 100px;
+    padding: 15px;
     border-radius: 7px;
-    padding: 10px;
-    margin: 10px 0;
-    box-shadow: 10px 1px 3px rgba(1,0,0,0.1);
-    list-style-type: none;
-    margin-left: 50px;
-    margin-top: 50px;
-}
-
-.new_task label{
-    font-family: "Open Sans", sans-serif;
+    margin: 50px auto;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .new_task label {
     font-size: 18px;
     font-weight: 600;
-}
-
-.new_task input{
-    text-align: start;
-    width: 200px;
-    border: 1px solid #ccc;
-    color: rgba(0, 0, 0, 0.5);
-    border-radius: 7px;
-    padding: 10px;
-    margin: 10px 0;
-    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
-}
-
-.new_task button{
-    background-color: blue;
-    color: #fff;
-    text-align: center;
-    width: 100px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    padding: 10px;
-    margin: 10px 0;
-    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
-}
-
-.tasks_blok{
-    display: flex;
-    padding-top: 15px;
-}
-    
-
-.tasks_blok ul label{
-    display: flex;
-}
-
-.tasks li{
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-left: 5px solid blue;
-    border-radius: 7px;
-    padding: 10px;
-    margin: 10px 0;
-    box-shadow: 10px 1px 3px rgba(1,0,0,0.1);
-    list-style-type: none;
-}
-
-.tasks button{
-    background-color: red;
-    text-align: center;
-    width: 150px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    padding: 10px;
-    margin: 10px 0;
-    margin-left: 80px;
-    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
-}
-
-.tasks label{
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    padding: 5px;
-    margin: 10px 0;
-    box-shadow: 10px 1px 3px rgba(1,0,0,0.1);
-    list-style-type: none;
-}
-
-
-
-.taskBlock li{
-    border-left: 5px solid gray;
-
-}
-
-
-
-.list_blogack label{
-    background-color: gray;  
-}
-
-.list_blogack li{
-    border-left: 5px solid gray;
-}
-
- 
-
-.list_in_progress label{
-    background-color: blue;  
-}
-
-.list_in_progress li{
-    border-left: 5px solid blue;
-}
-
-
-.list_ready label{
-    background-color:   green;  
-}
-
-.list_ready li{
-    border-left: 5px solid green;
-
-}
-
-
-.list_garbage label{
-    background-color:   red;  
-}
-
-.list_garbage li{
-    border-left: 5px solid red;
-
-}
-.new_task button:hover {
-    color: black;
-    background-color: rgb(210, 26, 26);
-    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
-}
-
-.new_task button:active {
-    color: #0077ff;
-}
-
-
-.tasks button:hover {
-    color: black;
-    background-color:blue;
-    box-shadow: 0 1px 3px rgba(1,0,0,0.1);
-}
-
-.tasks button:active {
-    color: red;
-} 
-
-.task-element {
-    background-color: #f4f4f9;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333;
   }
+  
+  .new_task input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .new_task button {
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .new_task button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Блок задач */
+  .tasks_blok {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+  }
+  
+  .tasks {
+    width: 350px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tasks li {
+    background-color: #f4f4f9;
+    border-left: 5px solid #3b82f6;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+  
+  .tasks button {
+    background-color: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .tasks button:hover {
+    background-color: #dc2626;
+  }
+  
+  /* Разные стили для категорий */
+  .list_blogack li {
+    border-left-color: gray;
+  }
+  
+  .list_in_progress li {
+    border-left-color: blue;
+  }
+  
+  .list_ready li {
+    border-left-color: green;
+  }
+  
+  .list_garbage li {
+    border-left-color: red;
+  }
+  
