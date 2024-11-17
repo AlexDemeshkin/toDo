@@ -1,5 +1,5 @@
 import Observable from '../framework/observable.js';
-import { generateId } from '../../utils.js';
+import { generateId } from '../utils.js';
 
 import { UserAction } from '../const.js';
 import ApiService from '../framework/view/api-service.js';
