@@ -111,6 +111,12 @@ font-size: 20px;
   background-color: #dc2626;
 }
 
+.tasks button:disabled, .btn:hover:disabled {
+  background-color: rgba(211, 12, 12, 0.1);
+  border: 1px solid rgba(194, 110, 210, 0.1);
+  cursor: not-allowed;
+}
+
 .tasks label{
   border: 1px solid #ccc;
   border-radius: 7px;
@@ -167,6 +173,10 @@ font-size: 20px;
   border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+#task-submit{
+color: #575555;
+background-color: rgba(var(--color), 0.8);}
 
 .loading{
 position: fixed;
