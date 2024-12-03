@@ -70,14 +70,16 @@ export default class TasksBoardPresenter {
       );
       if (tasksForStatus.length===0){
         render(new SubmitTaskComponent(), tasksListComponent.element);
-        }
+        this.makeClearButton();
+
+        const btn = document.querySelector('#clear')
+        btn.setAttribute('disabled','')
+      }
       else{
         tasksForStatus.forEach(elem =>{
           this.#renderTask( elem,tasksListComponent.element);   
-       
         })
         this.makeClearButton();
-
         }
     }
     async createTask() {
@@ -127,7 +129,6 @@ export default class TasksBoardPresenter {
       console.error('Ошибка при очистке корзины:',err)
     }
   }
-
 
   #loading(){
     render (this.#loadingComponent,this.#boardContainer,RenderPosition.BEFOREBEGIN)
